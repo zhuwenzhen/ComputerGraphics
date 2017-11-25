@@ -41,7 +41,7 @@ However, after I tried it in python notebook, it doesn’t work. I think I under
 ### Pictures
 
 #### Cube
-![Cube](~/img/cube.jpeg)
+![Cube](/img/cube.jpeg)
 #### Cylinder and Cone
 #### Sphere
 
