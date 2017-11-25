@@ -1,0 +1,51 @@
+# ReadMe - Assignment 4: Intersect
+
+### Wenzhen Zhu 
+wustl key: wenzhen
+wustl ID: 445518
+
+Free day used: 1
+Free day remianing: 2
+
+## Part I: Performance
++ Cube, Cylinder, Cone, and Sphere works perfectly, I checked carefully with demo.
++ I tried to implement torus, but only did tessellation working. I don't have enough time to do the intersect. 
+
+## Part II: Files modifed
++ Shape
+	+ MyShape.h
+		+ Changed computeTriangle virtual
+		+ Added intersect(const Point3 & p, Vector3 & d) as virtual function
+		+ Added new variable HitRecord hr to store the intersection pts;
+	+ Added intersect function in
+			+ Cube
+			+ Cylinder
+			+ Cone
+			+ Sphere
+			+ Torus (unfinished)
+
+	+ Added new class: Torus.
+	+ fixed old bug in computeTriangle(int n, int m) in Cone.cpp, now smooth shading works correctly.
+	+ Modified ShapesUI.cpp/.h and ShapesInterface.cpp/.h to show Torus.
+
++ Intersect
+	+ HitRecord.h
+		+ added friend class Cube, Cylinder, Cone, Sphere, and Torus
+	+ IntersectionInterface.cpp/.h
+		+ modified to show Torus
+	+ IntersectionUI.h
+		+ Added new variables
+			+ Cube cube;
+			+ Cylinder cylinder;
+			+ Cone cone;
+			+ Sphere sphere;
+			+ Torus torus;
+			+ Shape *shape;
+	+ IntersectionUI.cpp
+		+ Modified changeShape to 
+			+ change shapes
+			+ filled up tesselation vector
+		+ Modified draw()
+			+ draw shape
+			+ perform intersection
+			+ call drawHits to show intersection
