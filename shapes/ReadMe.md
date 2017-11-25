@@ -43,7 +43,11 @@ However, after I tried it in python notebook, it doesn’t work. I think I under
 #### Cube
 ![Cube](/img/cube.jpeg)
 #### Cylinder and Cone
+![](/img/cone_cylinder.jpeg)
 #### Sphere
+![](/img/sphere.jpeg)
+![](/img/sphere2.jpeg)
+![](/img/sphere3.jpeg)
 
 ## Structure
 ### Shape (Base class)
@@ -82,8 +86,13 @@ cube4[n_] := {FaceForm[Yellow, Transparent],
        Identity]@{RotateLeft[{(i - 1)/n - 0.5, (j - 1)/n - 0.5, k}, 
         m], RotateLeft[{i/n - 0.5, (j - 1)/n - 0.5, k}, m], 
        RotateLeft[{(i - 1)/n - 0.5, j/n - 0.5, k}, m]}], {i, 1, 
-    n}, {j, 1, n}, {k, {-0.5, 0.5}}, {m, 0, 2}, {h, {-1, 1}}]}
+    n}, {j, 1, n}, {k, {-0.5, 0.5}}, {m, 0, 2}, {h, {-1, 1}}]
 ```
+
+![](/img/cube1.jpeg)
+![](/img/cube2.jpeg)
+![](/img/cube3.jpeg)
+
 ### Cylinder(derived class #2)
 + computeTriangle(int n, int m) : functionality is similar as cube
 
@@ -95,4 +104,7 @@ cube4[n_] := {FaceForm[Yellow, Transparent],
 I found this python code on line
 https://sites.google.com/site/dlampetest/python/triangulating-a-sphere-recursively
 
+
 However, after I tried it in python notebook, it doesn’t work. I think I understand this recursive midpoint divide process. I did a prototype in Mathematica.
+
+![](/img/sphere4.jpeg)
