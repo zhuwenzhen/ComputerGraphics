@@ -41,7 +41,7 @@ However, after I tried it in python notebook, it doesn’t work. I think I under
 ### Pictures
 
 #### Cube
-![Cube](~/img/cube)
+![Cube](~/img/cube.jpeg)
 #### Cylinder and Cone
 #### Sphere
 
@@ -67,13 +67,15 @@ However, after I tried it in python notebook, it doesn’t work. I think I under
 cube0[n_] := 
  Table[Polygon[{{-0.5 + i, -0.5 + j, -0.5}, {0.5 + i, -0.5 + 
       j, -0.5}, {-0.5 + i, 0.5 + j, -0.5}}], {i, 1, n}, {j, 1, n}]
-``````
+```
+```
 cube3[n_] := 
  Table[Polygon[{RotateLeft[{(i - 1)/n - 0.5, (j - 1)/n - 0.5, k}, m], 
     RotateLeft[{i/n - 0.5, (j - 1)/n - 0.5, k}, m], 
     RotateLeft[{(i - 1)/n - 0.5, j/n - 0.5, k}, m]}], {i, 1, n}, {j, 
    1, n}, {k, {-0.5, 0.5}}, {m, 0, 2}]
-``````
+```
+```
 cube4[n_] := {FaceForm[Yellow, Transparent], 
   Table[Polygon[
     h If[h (2 k) == -1, {#[[2]], #[[1]], #[[3]]} &, 
@@ -81,7 +83,8 @@ cube4[n_] := {FaceForm[Yellow, Transparent],
         m], RotateLeft[{i/n - 0.5, (j - 1)/n - 0.5, k}, m], 
        RotateLeft[{(i - 1)/n - 0.5, j/n - 0.5, k}, m]}], {i, 1, 
     n}, {j, 1, n}, {k, {-0.5, 0.5}}, {m, 0, 2}, {h, {-1, 1}}]}
-```### Cylinder(derived class #2)
+```
+### Cylinder(derived class #2)
 + computeTriangle(int n, int m) : functionality is similar as cube
 
 
